@@ -331,6 +331,32 @@ section .container {
     background: var(--primary-light) !important;
 }
 
+/* Style for "To be declared" text */
+.to-be-declared2 {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-style: bold;
+    text-decoration: underline;
+    animation: pulse 2s infinite;
+}
+
+.to-be-declared {
+    display: inline-block;
+    padding: 0.4em 0.75em;
+    background-color: rgba(255, 215, 0, 0.15); /* soft gold highlight */
+    color: #b58900; /* deep gold text */
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px dashed #b58900;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation: pulse-glow 2.5s ease-in-out infinite;
+    box-shadow: 0 0 0px transparent;
+    transition: box-shadow 0.3s ease;
+}
+
+
 /* Organizer cards with blue theme */
 .organizer-card {
     transition: all 0.3s ease;
