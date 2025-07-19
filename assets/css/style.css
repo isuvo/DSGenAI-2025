@@ -658,9 +658,19 @@ footer {
         gap: 1rem;
     }
     
-    .hero-buttons .btn {
+.hero-buttons .btn {
         width: 100%;
         margin: 0;
+    }
+}
+
+.mobile-logos {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .mobile-logos {
+        display: block;
     }
 }
 

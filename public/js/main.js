@@ -69,37 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Navbar active link highlighting
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections_for_nav = document.querySelectorAll('section[id]');
-
-    function highlightActiveNavLink() {
-        let current = '';
-        
-        sections_for_nav.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', highlightActiveNavLink);
 
     // Auto-close mobile navbar when clicking on a link
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.getElementById('navbarNav');
     
     if (navbarToggler && navbarCollapse) {
+        const navLinks = navbarCollapse.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -306,26 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, duration);
     }
 
-    // Performance optimization: Debounce scroll events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // Apply debouncing to scroll events
-    const debouncedScrollHandler = debounce(() => {
-        highlightActiveNavLink();
-    }, 10);
-
-    window.removeEventListener('scroll', highlightActiveNavLink);
-    window.addEventListener('scroll', debouncedScrollHandler);
 
     console.log('DSGenAI-2025 Workshop website loaded successfully! 🚀');
 });
