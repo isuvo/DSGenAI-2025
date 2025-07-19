@@ -781,3 +781,8 @@ a:focus {
         page-break-inside: avoid;
     }
 }
+
+.highlight-box {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-width: 2px !important;
+}
