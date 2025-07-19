@@ -302,6 +302,16 @@ section .container {
     color: var(--accent-color) !important;
 }
 
+.topic-item p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.topic-item p.text-left-align {
+    text-align: left;
+    text-justify: auto;
+}
+
 /* Important dates styling with blue theme */
 .list-group-item {
     transition: all 0.3s ease;
@@ -396,6 +406,11 @@ section .container {
 .organizer-card .btn-outline-primary:hover {
     background: var(--primary-color);
     border-color: var(--primary-color);
+}
+
+.organizer-card p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Program committee styling with blue accents */
@@ -510,6 +525,12 @@ footer {
     color: var(--success-color);
     font-weight: bold;
     margin-right: 0.5rem;
+}
+
+#submission .lead,
+#submission .topic-item p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Program schedule styling */
@@ -785,4 +806,9 @@ a:focus {
 .highlight-box {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-width: 2px !important;
+}
+
+.highlight-box p {
+    text-align: justify;
+    text-justify: inter-word;
 }
