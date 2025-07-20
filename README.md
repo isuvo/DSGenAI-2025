@@ -48,5 +48,7 @@ To get started with the project, follow these steps:
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
+## Website
+The website is hosted at https://isuvo.github.io/DSGenAI-2025/
 
 This project is licensed under the MIT License.
